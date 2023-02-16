@@ -1,16 +1,19 @@
 //your code here
-function minCostToConnectRopes(arr){
-	let pq = new PriorityQueue({comparator: (a, b) => a - b});
-	for(let repo of arr){
-		pq.offer(rope);
+function minCostToFormRopes(event){
+	
+	event.preventDefault();
+	var inputElement = document.querySelector('input').value;
+    var arr = inputElement.split(',');
+	arr.sort(fuction (a,b) {return a-b});
+	
+	var cost = 0;
+	while(arr.length > 1){
+		var res =Number(arr[0]) + Number(arr[1]);
+		arr.push(res);
+		cost += res;
+		arr.shift();
+		arr.shift();
+	    arr.sort(function (a,b) {result a-b});
 	}
-	let cost = 0;
-	while(pq.size()>1){
-		let rope1 = pq.poll();
-		let rope2 = pq.poll();
-		let combinedRepo = rope1 + rope2;
-		const += combinedRepo;
-		pq.offer(combinedRepo)
-	}
-	return cost;
+	document.getElementById("result").textContent = cost;
 }
